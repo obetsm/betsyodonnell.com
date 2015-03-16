@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog 
+permalink: /blog/
+---
+
+<div class="post-list">
+  {% for post in site.categories.blog %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+      <div class="post-box">
+    {% else %}
+      <div class="post-box last">
+    {% endif %}
+
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+  {% endfor %}
+</div>

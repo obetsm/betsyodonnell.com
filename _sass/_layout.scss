@@ -16,6 +16,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    width: 200px;
 
     &,
     &:visited {
@@ -24,22 +25,25 @@
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+  width: 740px;
+  float: right;
+  line-height: 100px;
 
-    .menu-icon {
-        display: none;
-    }
+  .menu-icon {
+      display: none;
+  }
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+  .page-link {
+      color: $text-color;
+      line-height: $base-line-height;
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
+      // Gaps between nav items, but not on the first one
+      &:not(:first-child) {
+          margin-left: 20px;
+      }
+  }
+
+
 
     @include media-query($on-palm) {
         position: absolute;
@@ -84,6 +88,38 @@
             padding: 5px 10px;
         }
     }
+}
+
+.site-nav-left {
+  float: left;
+
+  .page-link-work, 
+  .page-link-about,
+  .page-link-blog {
+    padding: 16px 36px;
+    font-family: 'Muli';
+  }
+
+  .page-link-work {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+
+  .page-link-about {
+    background-color: #fff;
+    border: 2px solid #2b2b2b;
+  }
+
+  .page-link-blog {
+    background-color: #777;
+    color: #fff;
+  }
+
+
+}
+
+.site-nav-right {
+  float: right;
 }
 
 
@@ -165,16 +201,21 @@
     padding: $spacing-unit 0;
 }
 
-.page-heading {
-    font-size: 20px;
-}
-
 .post-list {
     margin-left: 0;
-    list-style: none;
+    @extend %clearfix;
 
-    > li {
+    > .post-box {
+        height: 445px;
+        width: 445px;
+        margin-right: 30px;
         margin-bottom: $spacing-unit;
+        border: 5px solid #fbb71d;
+        float: left;
+    }
+
+    > .post-box.last {
+      margin-right: 0px; 
     }
 }
 
