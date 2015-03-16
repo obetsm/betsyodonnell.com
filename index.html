@@ -3,32 +3,18 @@ layout: default
 ---
 
 <div class="home">
-
   <div class="post-list">
     {% for post in site.posts %}
       {% assign loopindex = forloop.index | modulo: 2 %}
-      {% if loopindex == 1 %}
-        <div class="post-box">
-      {% else %}
-        <div class="post-box last">
+
+      {% if post.categories contains "work" %}
+        {% include post-box-work.html %}
       {% endif %}
 
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </div>
+      {% if post.categories contains "blog" %}
+        {% include post-box-blog.html %}
+      {% endif %}
+
     {% endfor %}
   </div>
-
-
-  <!--<ul class="post-list">-->
-    <!--{% for post in site.posts %}-->
-      <!--<li>-->
-        <!--<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>-->
-
-        <!--<h2>-->
-          <!--<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
-        <!--</h2>-->
-      <!--</li>-->
-    <!--{% endfor %}-->
-  <!--</ul>-->
-
 </div>

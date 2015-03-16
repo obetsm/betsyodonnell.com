@@ -1,0 +1,18 @@
+{% if loopindex == 1 %}
+  <div class="post-box post-box-work">
+{% else %}
+  <div class="post-box post-box-work last">
+{% endif %}
+
+  <div class="post-box-top">
+    <img src="http://placehold.it/445x385">
+  </div>
+
+  <div class="post-box-bottom">
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+    {% for tag in post.tags %}
+      <div class="tag tag-{{ tag }}">{{ tag }}</div>
+    {% endfor %}
+  </div>
+</div>

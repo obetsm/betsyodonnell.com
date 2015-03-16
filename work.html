@@ -5,17 +5,11 @@ permalink: /work/
 ---
 
 {% include work_types_menu.html %}
-
-<div class="post-list">
-  {% for post in site.categories.work %}
-    {% assign loopindex = forloop.index | modulo: 2 %}
-    {% if loopindex == 1 %}
-      <div class="post-box">
-    {% else %}
-      <div class="post-box last">
-    {% endif %}
-
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-  {% endfor %}
+<div class="content-pad">
+  <div class="post-list">
+    {% for post in site.categories.work %}
+      {% assign loopindex = forloop.index | modulo: 2 %}
+      {% include post-box-work.html %}
+    {% endfor %}
+  </div>
 </div>

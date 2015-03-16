@@ -7,15 +7,12 @@ permalink: /work/illustration/
 {% include work_types_menu.html %}
 
 <div class="post-list">
-  {% for post in site.categories.illustration %}
-    {% assign loopindex = forloop.index | modulo: 2 %}
-    {% if loopindex == 1 %}
-      <div class="post-box">
-    {% else %}
-      <div class="post-box last">
+  {% assign counter = 1 %}
+  {% for post in site.categories.work %}
+    {% if post.tags contains "illustration" %}
+      {% assign loopindex = counter | modulo: 2 %}
+      {% include post-box-work.html %}
+      {% assign counter = counter | plus:1 %}
     {% endif %}
-
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
   {% endfor %}
 </div>
