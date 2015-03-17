@@ -8,7 +8,7 @@ permalink: /work/
 <div class="content-pad">
   <div class="post-list">
     {% for post in site.categories.work %}
-      {% assign loopindex = forloop.index | modulo: 2 %}
+      {% assign loopcounter = forloop.index %}
       {% include post-box-work.html %}
     {% endfor %}
   </div>

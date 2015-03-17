@@ -6,7 +6,7 @@ permalink: /blog/
 
 <div class="post-list">
   {% for post in site.categories.blog %}
-    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% assign loopcounter = forloop.index %}
     {% include post-box-blog.html %}
   {% endfor %}
 </div>

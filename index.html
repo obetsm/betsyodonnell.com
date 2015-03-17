@@ -5,7 +5,8 @@ layout: default
 <div class="home">
   <div class="post-list">
     {% for post in site.posts %}
-      {% assign loopindex = forloop.index | modulo: 2 %}
+
+      {% assign loopcounter = forloop.index %}
 
       {% if post.categories contains "work" %}
         {% include post-box-work.html %}

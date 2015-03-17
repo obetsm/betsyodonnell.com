@@ -1,3 +1,5 @@
+{% assign loopindex = loopcounter | modulo: 2 %}
+
 {% if loopindex == 1 %}
   <div class="post-box post-box-blog">
 {% else %}
@@ -5,7 +7,7 @@
 {% endif %}
 
   <div class="post-box-top">
-    <img src="http://placehold.it/445x285">
+    <img src="http://lorempixel.com/445/285" width="445" height="285">
   </div>
 
   <div class="post-box-bottom">

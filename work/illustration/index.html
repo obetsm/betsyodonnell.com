@@ -10,7 +10,7 @@ permalink: /work/illustration/
   {% assign counter = 1 %}
   {% for post in site.categories.work %}
     {% if post.tags contains "illustration" %}
-      {% assign loopindex = counter | modulo: 2 %}
+      {% assign loopcounter = counter %}
       {% include post-box-work.html %}
       {% assign counter = counter | plus:1 %}
     {% endif %}
