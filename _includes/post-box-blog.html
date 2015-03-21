@@ -7,16 +7,24 @@
 {% endif %}
 
   <div class="post-box-top">
-    <img src="http://lorempixel.com/445/285" width="445" height="285">
+    <img src="http://lorempixel.com/429/285" width="429" height="285">
   </div>
 
   <div class="post-box-bottom">
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} lipsum another text Would be Here Hello World</a>
+    <a class="h3 post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
-    {{ post.content | strip_html | truncatewords: 30 }}
+    <div class="clear"></div>
 
     {% for tag in post.tags %}
-      <div class="tag tag-{{ tag }}">{{ tag }}</div>
+      <div class="h6 tag tag-small tag-{{ tag }}">{{ tag }}</div>
     {% endfor %}
+
+    <div class="clear"></div>
+
+    <div class="post-box-bottom-content">
+      <p>
+        {{ post.content | strip_html | truncatewords: 30 }}
+      </p>
+    </div>
   </div>
 </div>

@@ -9,19 +9,54 @@
     position: relative;
 }
 
-.site-title {
-    font-size: 26px;
-    line-height: 80px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    width: 53px;
-    margin-right: 20px;
+/*.site-title {*/
+    /*font-size: 26px;*/
+    /*line-height: 80px;*/
+    /*letter-spacing: -1px;*/
+    /*margin-bottom: 0;*/
+    /*float: left;*/
+    /*width: 53px;*/
+    /*margin-right: 20px;*/
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
+    /*&,*/
+    /*&:visited {*/
+        /*color: $grey-color-dark;*/
+    /*}*/
+/*}*/
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+.site-title {
+  font-family: "Arvo", sans-serif; 
+  font-size: 26px;
+  float: none;
+}
+
+.site-slogan {
+  font-family: "Arvo", sans-serif; 
+  float: none;
 }
 
 .site-nav {
