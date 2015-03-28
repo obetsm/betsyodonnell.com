@@ -1,0 +1,10 @@
+---
+layout: default
+title: Process
+category: blog
+permalink: /blog/process/
+---
+
+{% assign collection = (site.categories.blog | where_matches:"tags", "process") %}
+{% include post-boxes.html %}
+

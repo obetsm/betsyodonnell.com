@@ -1,0 +1,8 @@
+{% if post.categories contains "work" %}
+  {% include post-box-work.html %}
+{% endif %}
+
+{% if post.categories contains "blog" %}
+  {% include post-box-blog.html %}
+{% endif %}
+

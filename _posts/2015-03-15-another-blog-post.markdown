@@ -3,9 +3,10 @@ layout: post
 title:  "Post About My Work!"
 date:   2015-03-15 21:56:06
 categories: work
-tags: print webdesign
+tags: print webdesign digitalart
 ---
 Just something else for now.
+haha
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll

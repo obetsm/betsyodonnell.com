@@ -1,33 +1,29 @@
 <div id="header">
   <div class="container">
     <div id="header-top">
-      <div class="h1">Betsy O'Donnell</div>
-      <div class="h3">Digital Designer</div>
+      <a href="/">
+        <div class="h1">Betsy O'Donnell</div>
+        <div class="h4">Art. Psychology. Digital.</div>
+      </a>
     </div>
 
     <div id="header-bottom">
-      <div id="header-bottom-left">
-        <div id="header-logo">
-          <a href="/">
-            <img src="/images/logo.png">
-          </a>
-        </div>
+      <div id="header-main-menu">
+        <a class="h3 {% if page.category == 'work' %}active{% endif %}" href="/work/">Work</a>
+        <a class="h3 {% if page.category == 'blog' %}active{% endif %}" href="/blog/"><h3>Blog<h3></a>
+        <div class="clear"></div>
       </div>
 
-      <div id="header-bottom-right">
-        <div id="header-main-menu">
-          <a class="h3 active" href="/work/">Work</a>
-          <a class="h3" href="/blog/"><h3>Blog<h3></a>
-          <div class="clear"></div>
-        </div>
+      <div id="header-sub-menu">
+        <a class="p tag tag-webdesign {% if page.category == 'blog' %}inactive{% endif %}" href="/work/web-design/">Web Design</a>
+        <a class="p tag tag-illustration {% if page.category == 'blog' %}inactive{% endif %}" href="/work/illustration/">Illustration</a>
+        <a class="p tag tag-video {% if page.category == 'blog' %}inactive{% endif %}" href="/work/video/">Video</a>
+        <a class="p tag tag-print {% if page.category == 'blog' %}inactive{% endif %}" href="/work/print/">Print</a>
+        <a class="p tag tag-digitalart {% if page.category == 'blog' %}inactive{% endif %}" href="/work/digital-art/">Digital Art</a>
+        <a class="p tag tag-process {% if page.category == 'work' %}inactive{% endif %}" href="/blog/process/">Process</a>
+        <a class="p tag tag-review {% if page.category == 'work' %}inactive{% endif %}" href="/blog/review/">Review</a>
 
-        <div id="header-sub-menu">
-          <a class="h5 tag tag-webdesign" href="/work/web-design/">Web Design</a>
-          <a class="h5 tag tag-illustration" href="/work/illustration/">Illustration</a>
-          <a class="h5 tag tag-video" href="/work/video/">Video</a>
-          <a class="h5 tag tag-print" href="/work/print/">Print</a>
-          <div class="clear"></div>
-        </div>
+        <div class="clear"></div>
       </div>
 
       <div class="clear"></div>

@@ -1,51 +1,68 @@
 *
   margin: 0
   padding: 0
+
+body
+  background: url("/images/background.png")
+
 h1
-  font-size: 50px
+  font-size: 37.5px
 h2
-  font-size: 42px
+  font-size: 31.5px
 h3
-  font-size: 36px
+  font-size: 27px
 h4
-  font-size: 30px
+  font-size: 22.5px
 h5
-  font-size: 24px
+  font-size: 18px
 h6
-  font-size: 15px
+  font-size: 11.25px
 h1, h2, h3, h4, h5, h6
   font-family: "Arvo", Arial, serif
   font-weight: normal
 
 .h1
-  font-size: 50px
+  font-size: 37.5px
 .h2
-  font-size: 42px
+  font-size: 31.5px
 .h3
-  font-size: 36px
+  font-size: 27px
 .h4
-  font-size: 30px
+  font-size: 22.5px
 .h5
-  font-size: 24px
+  font-size: 18px
 .h6
-  font-size: 15px
+  font-size: 11.25px
 .h1, .h2, .h3, .h4, .h5, .h6
   font-family: "Arvo", Arial, serif
   font-weight: normal
 
 p
   font-family: "PT Sans", Arial, sans-serif
-  font-size: 15pt
+  font-size: 13pt
+
+.p
+  font-family: "PT Sans", Arial, sans-serif
+  font-size: 13pt
+  font-weight: normal
 
 a
   font-family: "PT Sans", Arial, sans-serif
+  font-size: 13pt
   font-weight: bold
-  font-size: 15pt
   color: #000  
   text-decoration: none
 
 .clear
   clear: both
+
+#outer-wrapper
+  border: 3px solid #ededed
+  width: 1200px
+  margin: 100px auto
+  padding-top: 40px
+  padding-bottom: 97px
+  background: #fff
 
 .container
   width: 940px
@@ -53,6 +70,10 @@ a
 
 #header
   margin-top: 70px
+
+#header .container
+  padding-bottom: 60px
+  border-bottom: 3px solid #ededed
 
 #header-logo img
   width: 123px
@@ -72,11 +93,11 @@ a
   margin-bottom: 30px
 
 #header-main-menu, #header-sub-menu
-  margin-left: 40px
 
 #header-main-menu a
   float: left
   margin-right: 30px
+  border-bottom: 3px solid transparent
 
   &:hover
     border-bottom: 3px solid $black
@@ -84,11 +105,38 @@ a
   &.active
     border-bottom: 3px solid $black
 
+#footer .container
+  border-top: 3px solid #ededed
+
+.footer-col .h3
+  margin-bottom: 30px
+
+.footer-col p
+  margin-bottom: 20px
+
+.footer-col.footer-col-1 p
+  margin-bottom: 5px
+
+.footer-col.footer-col-1, .footer-col.footer-col-2
+  margin-top: 1px
+  padding-top: 40px
+  
+.footer-col.footer-col-1
+  float: left
+
+.footer-col.footer-col-2
+  float: right
+  width: 550px
+
+.footer-col.footer-col-1 .copyright
+  font-size: 12pt
+  margin-top: 200px
+
 .tag
   display: inline-block
   line-height: 20px
-  padding: 10px 26px
-  border-radius: 5px
+  padding: 7px 26px
+  border-radius: 20px
   margin-right: 15px
   font-family: "PT Sans", Arial, sans-serif
 
@@ -107,29 +155,41 @@ a
   &.tag-print
     background: $mint
 
+  &.tag-digitalart
+    background: $dolphin-blue
+
+  &.tag-process
+    background: $blood-orange
+
+  &.tag-review
+    background: $eighties-green
+
+  &.inactive
+    background: #eee
+    color: #ccc
 
 #content
   margin-top: 60px
 
-.post-list
+.post-list-1
+  margin-right: 70px
+
+.post-list-1, .post-list-2
   margin-left: 0
-  margin-top: 50px
+  float: left
   @extend %clearfix
 
   > .post-box
-    height: 600px
-    width: 449px
-    margin-right: 30px
+    width: 435px
     margin-bottom: 30px
-    border: 3px solid #d8d8d8
-    float: left
-    border-radius: 10px
+    border: 3px solid #transparent
+    //border-radius: 10px
 
     &.last
       margin-right: 0px
 
     .post-box-bottom
-      padding: 20px
+      padding: 20px 0 60px 0
 
     .post-box-bottom .post-link
       margin-bottom: 10px
@@ -141,8 +201,8 @@ a
       margin-top: 20px
 
     .post-box-top
-      margin-left: 10px
-      margin-top: 10px
+      //margin-left: 10px
+      //margin-top: 10px
 
     .post-box-top img
-      border-radius: 5px
+      //border-radius: 5px

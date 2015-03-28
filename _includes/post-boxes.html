@@ -1,0 +1,19 @@
+{% assign total_size = collection | size %}
+{% assign list_2_size = total_size | divided_by:2 %}
+{% assign list_1_size = total_size | minus:list_2_size %}
+
+<div class="post-list-1">
+  {% for post in collection limit:list_1_size %}
+    {% assign loopcounter = forloop.index %}
+    {% include post-box.html %}
+  {% endfor %}
+</div>
+
+<div class="post-list-2">
+  {% for post in collection offset:list_1_size %}
+    {% assign loopcounter = forloop.index %}
+    {% include post-box.html %}
+  {% endfor %}
+</div>
+
+<div class="clear"><!-- --></div>

@@ -1,0 +1,84 @@
+
+<div>
+
+  <div style="display:none;">
+    <h1>Should not</h1>
+    {% if filter_tag %}
+      {% capture final_collection %}
+        {% for post in collection %}
+          {% if post.tags contains filter_tag %}
+            {{ forloop.index0 }}
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+    {% endif %}
+  </div>
+
+  <h1>Final Collection</h1>
+  {% for item in final_collection %}
+    {{ item }}
+  {% endfor %}
+
+
+  {{ final_collection | size }}
+  {% assign total_size = final_collection | size %}
+  {{ total_size }}
+  {% assign list_1_size = total_size | divided_by:2 %}
+  {% assign list_2_size = total_size | minus:list_1_size %}
+</div>
+
+<h1>Tester</h1>
+{% for i in collection %}
+  <h2> Collection {{ i }} </h2>
+  {{ collection[i] }}
+{% endfor %}
+
+<div class="clear"></div>
+
+<div class="post-list-1">
+  {% for post in collection limit:list_1_size %}
+    {% assign loopcounter = forloop.index %}
+    {% include post-box.html %}
+  {% endfor %}
+</div>
+
+<div class="post-list-2">
+  {% for post in collection offset:list_1_size %}
+    {% assign loopcounter = forloop.index %}
+    {% include post-box.html %}
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% assign posts = (site.categories.work | where_matches:"tags", "illustration") %}

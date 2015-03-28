@@ -1,16 +1,10 @@
 ---
 title: Video Work 
 layout: default
+category: work
 permalink: /work/video/
 ---
 
-<div class="post-list">
-  {% assign counter = 1 %}
-  {% for post in site.categories.work %}
-    {% if post.tags contains "video" %}
-      {% assign loopcounter = counter %}
-      {% include post-box-work.html %}
-      {% assign counter = counter | plus:1 %}
-    {% endif %}
-  {% endfor %}
-</div>
+{% assign collection = (site.categories.work | where_matches:"tags", "video") %}
+{% include post-boxes.html %}
+

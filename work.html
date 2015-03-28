@@ -1,14 +1,9 @@
 ---
 title: Work
 layout: default
+category: work
 permalink: /work/
 ---
 
-<div class="content-pad">
-  <div class="post-list">
-    {% for post in site.categories.work %}
-      {% assign loopcounter = forloop.index %}
-      {% include post-box-work.html %}
-    {% endfor %}
-  </div>
-</div>
+{% assign collection = site.categories.work %}
+{% include post-boxes.html %}

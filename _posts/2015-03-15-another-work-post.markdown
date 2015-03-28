@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Another Work Post!"
+title:  "Another Work Post Betsy Lorem Ipsum Bigger Title!"
 date:   2015-03-15 21:35:15
 categories: work
 tags: webdesign illustration

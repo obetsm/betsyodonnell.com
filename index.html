@@ -2,20 +2,6 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="post-list">
-    {% for post in site.posts %}
+{% assign collection = (site.posts) %}
+{% include post-boxes.html %}
 
-      {% assign loopcounter = forloop.index %}
-
-      {% if post.categories contains "work" %}
-        {% include post-box-work.html %}
-      {% endif %}
-
-      {% if post.categories contains "blog" %}
-        {% include post-box-blog.html %}
-      {% endif %}
-
-    {% endfor %}
-  </div>
-</div>

@@ -1,0 +1,10 @@
+---
+layout: default
+title: Digital Art 
+category: work
+permalink: /work/digital-art/
+---
+
+{% assign collection = (site.categories.work | where_matches:"tags", "digitalart") %}
+{% include post-boxes.html %}
+

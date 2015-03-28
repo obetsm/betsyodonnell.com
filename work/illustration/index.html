@@ -1,16 +1,10 @@
 ---
 layout: default
 title: Illustration 
+category: work
 permalink: /work/illustration/
 ---
 
-<div class="post-list">
-  {% assign counter = 1 %}
-  {% for post in site.categories.work %}
-    {% if post.tags contains "illustration" %}
-      {% assign loopcounter = counter %}
-      {% include post-box-work.html %}
-      {% assign counter = counter | plus:1 %}
-    {% endif %}
-  {% endfor %}
-</div>
+{% assign collection = (site.categories.work | where_matches:"tags", "illustration") %}
+{% include post-boxes.html %}
+

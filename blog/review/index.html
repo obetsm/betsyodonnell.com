@@ -1,0 +1,10 @@
+---
+layout: default
+title: Review 
+category: blog
+permalink: /blog/review/
+---
+
+{% assign collection = (site.categories.blog | where_matches:"tags", "review") %}
+{% include post-boxes.html %}
+
