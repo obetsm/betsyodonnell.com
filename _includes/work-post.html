@@ -1,0 +1,13 @@
+<div class="post">
+
+  <article class="post-content">
+    {{ content }}
+
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <div class="h6 tag tag-small tag-{{ tag }}">{{ tag }}</div>
+      {% endfor %}
+    </div>
+  </article>
+
+</div>

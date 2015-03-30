@@ -72,7 +72,7 @@ a
   margin-top: 70px
 
 #header .container
-  padding-bottom: 60px
+  //padding-bottom: 60px
   border-bottom: 3px solid #ededed
 
 #header-logo img
@@ -93,6 +93,9 @@ a
   margin-bottom: 30px
 
 #header-main-menu, #header-sub-menu
+
+#header-sub-menu
+  display: none
 
 #header-main-menu a
   float: left
@@ -130,7 +133,13 @@ a
 
 .footer-col.footer-col-1 .copyright
   font-size: 12pt
-  margin-top: 200px
+  margin-top: 230px
+
+.footer-col.footer-col-2 .made-with-pizza
+  float: right
+  width: 140px
+  height: 25px
+  margin-top: 145px
 
 .tag
   display: inline-block
@@ -141,7 +150,7 @@ a
   font-family: "PT Sans", Arial, sans-serif
 
   &.tag-small
-    padding: 4px 20px 
+    padding: 2px 15px 
 
   &.tag-illustration
     background: $cotton-candy
@@ -206,3 +215,16 @@ a
 
     .post-box-top img
       //border-radius: 5px
+
+.post
+  .post-content
+    padding-bottom: 50px
+
+    img 
+      margin-bottom: 20px
+
+    p
+      margin-bottom: 20px
+
+    //.post-tags
+      //margin-top: 20px
