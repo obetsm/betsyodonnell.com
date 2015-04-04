@@ -5,8 +5,5 @@ category: blog
 permalink: /blog/process/
 ---
 
-{{ site.categories.blog }}
-
-
 {% assign collection = (site.categories.blog | where_matches:"tags", "process") %}
 {% include post-boxes.html %}
